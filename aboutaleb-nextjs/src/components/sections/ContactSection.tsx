@@ -42,9 +42,12 @@ export default function ContactSection({ onAuthRequired }: { onAuthRequired: () 
     setLoading(true)
     try {
       const { error } = await supabase.from('leads').insert({
-        ...form,
-        lang,
-        status: 'new',
+        full_name: form.full_name,
+        email: form.email,
+       phone: form.phone,
+        major: form.major,
+       lang: lang,
+      status: 'new' as const,
       })
 
       if (error) throw error
