@@ -105,8 +105,8 @@ export default function Navbar({ onAuthClick }: NavbarProps) {
       <nav
         className={`sticky top-0 z-[1000] flex items-center justify-between px-[5%] h-[85px] transition-all duration-300
           ${scrolled
-            ? 'bg-black/98 backdrop-blur-md shadow-lg border-b border-white/10'
-            : 'bg-black/96 backdrop-blur-sm border-b border-white/8'}`}
+            ? 'bg-black shadow-lg border-b border-white/10'
+            : 'bg-black border-b border-white/10'}`}
       >
         {/* Logo */}
         <a href="#home" className="flex items-center gap-3 no-underline group">
