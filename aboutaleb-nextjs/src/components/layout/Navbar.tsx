@@ -116,7 +116,7 @@ export default function Navbar({ onAuthClick }: NavbarProps) {
               alt="Abou-Taleb Logo"
               width={60}
               height={60}
-              className="object-cover"
+              className="object-contain p-1 bg-white"
               onError={(e) => { (e.target as HTMLImageElement).src = 'https://placehold.co/60x60?text=AT' }}
             />
           </div>
