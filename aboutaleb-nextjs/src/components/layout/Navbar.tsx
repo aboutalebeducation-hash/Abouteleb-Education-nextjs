@@ -112,7 +112,7 @@ export default function Navbar({ onAuthClick }: NavbarProps) {
         <a href="#home" className="flex items-center gap-3 no-underline group">
           <div className="w-[60px] h-[60px] rounded-full overflow-hidden border-2 border-[#C0392B] group-hover:border-white transition-colors">
             <Image
-              src="/images/logo.png"
+              src="/images/logo.jpg"
               alt="Abou-Taleb Logo"
               width={60}
               height={60}
