@@ -14,12 +14,17 @@ interface LangContextType {
 const LangContext = createContext<LangContextType | null>(null)
 
 export function LangProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Language>('ar')
+  const [lang, setLangState] = useState<Language>(
+  (typeof window !== 'undefined' ? localStorage.getItem('lang') : null) as Language ?? 'ar'
+)
 
+  
   const setLang = (newLang: Language) => {
   setLangState(newLang)
   document.documentElement.lang = newLang
   document.documentElement.dir = translations[newLang].dir
+  localStorage.setItem('lang', newLang)
+  window.location.reload()
 }
 
   return (
