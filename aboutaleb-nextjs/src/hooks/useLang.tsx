@@ -16,11 +16,11 @@ const LangContext = createContext<LangContextType | null>(null)
 export function LangProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Language>('ar')
 
-  const setLang = useCallback((newLang: Language) => {
-    setLangState(newLang)
-    document.documentElement.lang = newLang
-    document.documentElement.dir = translations[newLang].dir
-  }, [])
+  const setLang = (newLang: Language) => {
+  setLangState(newLang)
+  document.documentElement.lang = newLang
+  document.documentElement.dir = translations[newLang].dir
+}
 
   return (
     <LangContext.Provider value={{
